@@ -104,10 +104,17 @@ The statistics may not be accurate since the computer is not exclusive when test
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Time_taken_to_test_model_on_testing_data.png)
 
 
+## Conclusions
+Images in the 4 problems have dierent characteristics. According to their overall accuracy, I ranked them as follows:
+- [MNIST]: black-and-white images with numeric patterns.
+- [FASHION-MNIST]: black-and-white images with dierent kinds of clothing.
+- [SVHN]: colourful images with numeric patterns.
+- [CIFAR-10]: colourful images with dierent types of objects.
 
+To the same data scale, MNIST always has the highest accuracy, while CIFAR-10 has the lowest. FASHION-MNIST and SVHN, which the former
+is a little bit higher than the latter, are both in the middle.
 
-
-
+In conclusion, the k-means image filter algorithm I implemented is more suitable for extracting features from black-and-white images, especially the ones with numbers on it. On the contrary, the worst situation is a colourful image with non-numeric patterns. The reason is we transform RGB value into greyscale in the algorithm, which could result in distortion of the original image.
 
 
 
