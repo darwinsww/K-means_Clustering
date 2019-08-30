@@ -99,7 +99,7 @@ If you don't want to use IntelliJ, following method could be an alternative:
 ```
 mkdir -p ~/ml
 
-cd ml
+cd ~/ml
 mkdir -p netlibNativeLinux1.0.2
 mkdir -p lib-stable-3-8-2
 mkdir -p weka-3-8-2
