@@ -12,7 +12,7 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 4. Select ```"Next"```  
 5. Enter ```"K-means_Clustering"``` as the project name
 6. Select ```"Finish"```
-7. Select ```"Project Structure"``` from the "File" menu
+7. Select ```"Project Structure"``` from the ```"File"``` menu
 8. Select ```"Libraries"```
 9. Click on ```"+"``` and choose ```"Java"```
 10. Navigate to the weka.jar file from the WEKA distribution you have downloaded and select it  
@@ -30,7 +30,7 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 16. Right-click on ```"src"``` under ```"K-means_Clustering"``` and select ```"New"``` -> ```"File"```
 17. Enter ```"weka/filters/unsupervised/attribute/KMeansImageFilter.java"``` and choose ```"OK"```
 18. Replace the blank KMeansImageFilter.java with the file in this repo
-19. Select ```"Edit Configurations"``` from the "Run" menu
+19. Select ```"Edit Configurations"``` from the ```"Run"``` menu
 20. Add a new configuration according to the following screenshot  
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Snapshot_of_the_project_configuration_in_IntelliJ.png)   
 21. Select ```"Run 'KMeansImageFilter'"``` from the ```"Run"``` menu
