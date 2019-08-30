@@ -80,10 +80,14 @@ mkdir -p ./out/production/K-means_Clustering
 Then, copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```
 
 - [Compile]:  
-```javac -classpath "~/ml/weka-3-8-2/weka.jar:~/ml/weka-3-8-2/mtj.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java```
+```
+javac -classpath "~/ml/weka-3-8-2/weka.jar:~/ml/weka-3-8-2/mtj.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
+```
 
 - [Package]:  
-```jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class```
+```
+jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class
+```
 
 
 ## Experiments
