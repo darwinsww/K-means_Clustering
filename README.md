@@ -26,9 +26,9 @@ The task in this project is to implement the method from (Coates & Ng, 2012) as 
 ## Dependencies
 - [Weka](https://www.cs.waikato.ac.nz/ml/weka/downloading.html)  
 Downlard ```"waka-x.x.x.zip"``` in the section ```"Other platforms (Linux, etc.)"```.   
-Unzip the zip file and you will find the necessary jar packages. Here used the ```"weka-3-8-2"```.   
+Unzip the zip file and you will find the necessary jar packages. Here used the ```"weka-3-8-2.zip"```.   
 
-- [netlibNativeLinux](netlibNativeLinux) Here used ```"1.0.2"```    
+- [netlibNativeLinux](netlibNativeLinux) Here used ```"netlibNativeLinux1.0.2"```    
 
 
 ## Step-by-step instructions for setting up an IntelliJ project
@@ -75,6 +75,7 @@ mkdir -p ~/ml
 
 cd ml
 mkdir netlibNativeLinux1.0.2
+mkdir lib-stable-3-8-2
 mkdir weka-3-8-2
 mkdir K-means_Clustering
 
@@ -86,13 +87,17 @@ mkdir -p ./out/production/K-means_Clustering
 
 - [Copy Files]:   
 Copy ```"netlibNativeLinux1.0.2.zip"``` to the folder ```"~/ml/netlibNativeLinux1.0.2"```
-Copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```   
+Copy ```"weka-3-8-2.zip"``` to the folder ```"~/ml/weka-3-8-2"```
+Copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/lib-stable-3-8-2"```   
 Copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```  
 
 - [Extraction]:
 ```
+cd ~/ml/weka-3-8-2
+unzip weka-3-8-2.zip
+
 cd ~/ml/netlibNativeLinux1.0.2
-unzip -z netlibNativeLinux1.0.2.zip
+unzip netlibNativeLinux1.0.2.zip
 
 cd ~/ml/K-means_Clustering/data
 tar -zxvf mnist.tar.gz
@@ -115,7 +120,7 @@ jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/
 A lot of experiments had been done, following is an example command runs the test:
 ```
 cd ~/ml/K-means_Clustering
-java -Xmx12g -cp "~/ml/weka-3-8-2/*:~/ml/netlibNativeLinux1.0.2/lib/*:out/production/means_Clustering/weka/filters/unsupervised/attribute/" \
+java -Xmx12g -cp "~/ml/lib-stable-3-8-2/*:~/ml/netlibNativeLinux1.0.2/lib/*:out/production/means_Clustering/weka/filters/unsupervised/attribute/" \
 weka.Run .FilteredClassifier -o -v -t ./data/mnist/training.arff -T ./data/mnist/testing.arff \
 -F ".KMeansImageFilter -D ./data//mnist/ -Z 8 -N 1 -K 128 -T 4 -P 2 -S 0" \
 -W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N1-r1.20 &
