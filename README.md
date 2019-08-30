@@ -33,3 +33,9 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Snapshot_of_the_project_configuration_in_IntelliJ.png)   
 21. Select "Run 'KMeansImageFilter'" from the "Run" menu
 22. Check that output is given in the terminal
+23. Finally, you will find two outputs in the out folder:  
+    KMeansImageFilter.class  
+    KMeansImageFilter$1MyPanel.class  
+   
+
+    
