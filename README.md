@@ -17,9 +17,9 @@ The task in this project is to implement the method from (Coates & Ng, 2012) as 
 
 
 ## References
-Coates, A. & Ng, A. Y. (2012). Learning feature representations with k-means. In Neural networks: Tricks of the trade (pp. 561-580). Springer.
+- [1] Adam Coates and Andrew Y. Ng. Learning feature representations with kmeans. In Gregoire Montavon, Genevieve B. Orr, and Klaus-Robert Muller, editors, Neural Networks: Tricks of the Trade - Second Edition, volume 7700 of Lecture Notes in Computer Science, pages 561-580. Springer, 2012.
 
-Frank, E., Hall, M. A. & Witten, I. H. (2016). The WEKA Workbench. On-line Appendix for "Data Mining: Practical Machine Learning Tools and Techniques", Morgan Kaufmann, Fourth Edition, 2016.
+- [2] Ian H. Witten, Eibe Frank, and Mark A. Hall. Data Mining: Practical Machine Learning Tools and Techniques. Morgan Kaufmann, Burlington, MA, 3 edition, 2011.
 
 ## Training Data
 - [mnist](https://www.cs.waikato.ac.nz/ml/521/assignment1/mnist.tar.gz)
@@ -70,4 +70,8 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
     KMeansImageFilter$1MyPanel.class  
     ```
 
-    
+## Experiments
+
+
+## Results
+
