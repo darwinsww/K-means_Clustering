@@ -28,7 +28,7 @@ The task in this project is to implement the method from (Coates & Ng, 2012) as 
 Downlard ```"waka-x.x.x.zip"``` in the section ```"Other platforms (Linux, etc.)"```.   
 Unzip the zip file and you will find the necessary jar packages. Here used the ```"weka-3-8-2.zip"```.   
 
-- [netlibNativeLinux](netlibNativeLinux) Here used ```"netlibNativeLinux1.0.2"```    
+- [netlibNativeLinux](http://weka.sourceforge.net/packageMetaData/netlibNativeLinux/index.html) Here used ```"netlibNativeLinux1.0.2"```    
 
 
 ## Step-by-step instructions for setting up an IntelliJ project
