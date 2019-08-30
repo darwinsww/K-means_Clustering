@@ -82,7 +82,13 @@ mkdir -p ./out/production/K-means_Clustering
 
 Then,   
 copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```   
-copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```   
+copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```  
+
+Exract the minst data 
+```
+cd ~/ml/K-means_Clustering/data
+tar -zxvf mnist.tar.gz
+```
 
 - [Compile]:  
 ```
