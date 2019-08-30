@@ -69,8 +69,17 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
     KMeansImageFilter.class  
     KMeansImageFilter$1MyPanel.class  
     ```
+    
+## Compile & Package
+If you don't want to use IntelliJ, following method could be an alternative:
+- [Compile]:
+javac -classpath "/home/ws96/weka-3-9-2/weka.jar:/home/ws96/weka-3-9-2/mtj.jar" -d ./out/production/MLAssignment1 ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java 
+- [Package]:
+jar -cvf KMeansImageFilter.jar ./out/production/MLAssignment1/weka/filters/unsupervised/attribute/*.class
+
 
 ## Experiments
+A lot of experiments had been done, following is an example command runs the test:
 ```
 java -Xmx12g -cp "lib-stable-3-8/*:/home/ws96/wekafiles/packages/netlibNativeLinux/lib/*:out/production/MLAssignment1/" \
 weka.Run .FilteredClassifier -o -v -t ./data/assignment1/mnist/training.arff -T ./data/assignment1/mnist/testing.arff \
