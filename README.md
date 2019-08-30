@@ -175,4 +175,5 @@ In conclusion, the k-means image filter algorithm I implemented is more suitable
 
 - [2] Ian H. Witten, Eibe Frank, and Mark A. Hall. Data Mining: Practical Machine Learning Tools and Techniques. Morgan Kaufmann, Burlington, MA, 3 edition, 2011.
 
+- [3] [Matrices in spherical K-means](https://github.com/darwinsww/K-means_Clustering/blob/master/refer/matrices_in_spherical_K_means.pdf)
 
