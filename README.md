@@ -16,11 +16,6 @@ It turns out that applying this process to raw image data does not work that wel
 The task in this project is to implement the method from (Coates & Ng, 2012) as a WEKA pre-processing tool (aka WEKA "filter") (Frank, Hall & Witten, 2016), but the deep learning method in Section 5 of the paper is not implemented. The filter should read a dataset with file names and one other attribute, the class attribute. The files contain images. The output of the filter needs to be the processed form of the images, suitable for other WEKA learning algorithms. The file names will be given as values of a string attribute. The class attribute can be nominal or numeric.
 
 
-## References
-- [1] Adam Coates and Andrew Y. Ng. Learning feature representations with kmeans. In Gregoire Montavon, Genevieve B. Orr, and Klaus-Robert Muller, editors, Neural Networks: Tricks of the Trade - Second Edition, volume 7700 of Lecture Notes in Computer Science, pages 561-580. Springer, 2012.
-
-- [2] Ian H. Witten, Eibe Frank, and Mark A. Hall. Data Mining: Practical Machine Learning Tools and Techniques. Morgan Kaufmann, Burlington, MA, 3 edition, 2011.
-
 ## Training Data
 - [mnist](https://www.cs.waikato.ac.nz/ml/521/assignment1/mnist.tar.gz)
 - [svhn](https://www.cs.waikato.ac.nz/ml/521/assignment1/svhn.tar.gz )
@@ -131,6 +126,9 @@ is a little bit higher than the latter, are both in the middle.
 In conclusion, the k-means image filter algorithm I implemented is more suitable for extracting features from black-and-white images, especially the ones with numbers on it. On the contrary, the worst situation is a colourful image with non-numeric patterns. The reason is we transform RGB value into greyscale in the algorithm, which could result in distortion of the original image.
 
 
+## References
+- [1] Adam Coates and Andrew Y. Ng. Learning feature representations with kmeans. In Gregoire Montavon, Genevieve B. Orr, and Klaus-Robert Muller, editors, Neural Networks: Tricks of the Trade - Second Edition, volume 7700 of Lecture Notes in Computer Science, pages 561-580. Springer, 2012.
 
+- [2] Ian H. Witten, Eibe Frank, and Mark A. Hall. Data Mining: Practical Machine Learning Tools and Techniques. Morgan Kaufmann, Burlington, MA, 3 edition, 2011.
 
 
