@@ -84,7 +84,7 @@ mkdir -p ./out/production/K-means_Clustering
 Copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```   
 Copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```  
 
-- [Exract the minst data]:
+- [Extract the minst data]:
 ```
 cd ~/ml/K-means_Clustering/data
 tar -zxvf mnist.tar.gz
@@ -107,10 +107,10 @@ jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/
 A lot of experiments had been done, following is an example command runs the test:
 ```
 cd ~/ml/K-means_Clustering
-java -Xmx12g -cp "lib-stable-3-8/*:/home/ws96/wekafiles/packages/netlibNativeLinux/lib/*:./out/production/MLAssignment1/" \
+java -Xmx12g -cp "lib-stable-3-8/*:/home/ws96/wekafiles/packages/netlibNativeLinux/lib/*:out/production/means_Clustering/weka/filters/unsupervised/attribute/" \
 weka.Run .FilteredClassifier -o -v -t ./data/mnist/training.arff -T ./data/mnist/testing.arff \
--F ".KMeansImageFilter -D ./data/mnist/ -Z 8 -N 4 -K 128 -T 4 -P 2 -S 0" \
--W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N4-r1.13 &
+-F ".KMeansImageFilter -D ./data//mnist/ -Z 8 -N 1 -K 128 -T 4 -P 2 -S 0" \
+-W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N1-r1.20 &
 ```
 
 ## Results
