@@ -120,8 +120,8 @@ jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/
 A lot of experiments had been done, following is an example command runs the test:
 ```
 cd ~/ml/K-means_Clustering
-java -Xmx12g -cp "~/ml/lib-stable-3-8-2/*:~/ml/netlibNativeLinux1.0.2/lib/*:out/production/means_Clustering/weka/filters/unsupervised/attribute/" \
-weka.Run .FilteredClassifier -o -v -t ./data/mnist/training.arff -T ./data/mnist/testing.arff \
+java -Xmx12g -cp "~/ml/lib-stable-3-8-2/*:~/ml/netlibNativeLinux1.0.2/lib/*:./out/production/means_Clustering/weka/filters/unsupervised/attribute/" \
+~/ml/weka-3-8-2/weka.Run .FilteredClassifier -o -v -t ./data/mnist/training.arff -T ./data/mnist/testing.arff \
 -F ".KMeansImageFilter -D ./data//mnist/ -Z 8 -N 1 -K 128 -T 4 -P 2 -S 0" \
 -W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N1-r1.20 &
 ```
