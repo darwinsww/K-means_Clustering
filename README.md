@@ -106,7 +106,7 @@ tar -zxvf mnist.tar.gz
 - [Compile]:  
 ```
 cd ~/ml/K-means_Clustering
-javac -classpath "~/ml/weka-3-8-2/weka.jar:~/ml/weka-3-8-2/mtj.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
+javac -classpath "~/ml/lib-stable-3-8-2/weka.jar:~/ml/lib-stable-3-8-2/mtj.jar:~/ml/lib-stable-3-8-2/arpack_combined_all.jar:~/ml/lib-stable-3-8-2/core.jar:~/ml/lib-stable-3-8-2/weka-src.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
 ```
 
 - [Package]:  
