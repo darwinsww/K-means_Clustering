@@ -1,4 +1,6 @@
 # Using K-means Clustering to Learn Representations for Image Classification
+
+## Description
 The k-means clustering algorithm, fast and relatively simple to implement, is one of the oldest algorithms in machine learning. It is still surprisingly useful and widely used in practice. One particularly interesting application is its use for feature extraction from images. The extracted features enable transformation of images into a representation that is suitable for standard classification
 algorithms, yielding a fast and simple method for image classification.  
 
@@ -10,6 +12,8 @@ Each feature map can be represented as a high-dimensional vector, just like the 
 also called "stride"|so that the size of the resulting feature map is reduced, and 2) after the feature maps have been created, we can reduce their size by splitting them into regions and pooling values from each region|for example, we can simply average all the numeric values in each region.  
 
 It turns out that applying this process to raw image data does not work that well. To make the process work better, the input values from each raw image are normalised and decorrelated using a process called "whitening". The paper (Coates & Ng, 2012) describes all this in detail. The pseudo code for the preprocessing steps and the clustering process are given on page 6 of this paper. Note that the paper applies a variant of k-means called "spherical" k-means, which ensures that the vectors representing each cluster centre all have length 1. Section 4 of the paper describes how to process images based on the output "dictionary" of k-means|each cluster centre is viewed as a code word in a dictionary.  
+
+The task in this project is to implement the method from (Coates & Ng, 2012) as a WEKA pre-processing tool (aka WEKA "filter") (Frank, Hall & Witten, 2016), but the deep learning method in Section 5 of the paper is not implemented. The filter should read a dataset with file names and one other attribute, the class attribute. The files contain images. The output of the filter needs to be the processed form of the images, suitable for other WEKA learning algorithms. The file names will be given as values of a string attribute. The class attribute can be nominal or numeric.
 
 
 ## References
