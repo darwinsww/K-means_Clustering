@@ -21,9 +21,9 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
     mtj.jar  
     arpack_combined_all.jar   
     core.jar  
-13. Final project structure should be like this:  
+13. Add them all in the same way
+14. Final project structure should be like this:  
     ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Project_structure.png)  
-14. Add them all in the same way
 15. Select "OK"
 16. Right-click on "src" under "KMeansImageFilter" and select "New" -> "File"
 17. Enter "weka/filters/unsupervised/attribute/KMeansImageFilter.java" and choose "OK"
