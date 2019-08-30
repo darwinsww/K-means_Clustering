@@ -52,6 +52,7 @@ Unzip the zip file and you will find the necessary jar packages. Here used the `
 
 - [netlibNativeLinux](http://weka.sourceforge.net/packageMetaData/netlibNativeLinux/index.html) Here used ```"netlibNativeLinux1.0.2"```    
 - libxtst-dev 
+  ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/libxtst-dev.png)
 ```
 sudo apt-get install libxtst-dev
 ```
