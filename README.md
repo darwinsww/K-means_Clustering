@@ -69,15 +69,20 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
 If you don't want to use IntelliJ, following method could be an alternative:
 - [Create Folders]: 
 ```
-mkdir -p ~/ml/weka-3-8-2
+mkdir -p ~/ml
 cd ml
 mkdir K-means_Clustering
+mkdir weka-3-8-2
 cd K-means_Clustering
+mkdir -p ./data/mnist
+mkdir -p ./lib-stable-3-8
 mkdir -p ./src/weka/filters/unsupervised/attribute
 mkdir -p ./out/production/K-means_Clustering
 ```
 
-Then, copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```
+Then,
+copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```
+copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data/mnist"```
 
 - [Compile]:  
 ```
@@ -95,9 +100,10 @@ jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/
 ## Experiments
 A lot of experiments had been done, following is an example command runs the test:
 ```
-java -Xmx12g -cp "lib-stable-3-8/*:/home/ws96/wekafiles/packages/netlibNativeLinux/lib/*:out/production/MLAssignment1/" \
-weka.Run .FilteredClassifier -o -v -t ./data/assignment1/mnist/training.arff -T ./data/assignment1/mnist/testing.arff \
--F ".KMeansImageFilter -D ./data/assignment1/mnist/ -Z 8 -N 4 -K 128 -T 4 -P 2 -S 0" \
+cd ~/ml/K-means_Clustering
+java -Xmx12g -cp "lib-stable-3-8/*:/home/ws96/wekafiles/packages/netlibNativeLinux/lib/*:./out/production/MLAssignment1/" \
+weka.Run .FilteredClassifier -o -v -t ./data/mnist/training.arff -T ./data/mnist/testing.arff \
+-F ".KMeansImageFilter -D ./data/mnist/ -Z 8 -N 4 -K 128 -T 4 -P 2 -S 0" \
 -W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N4-r1.13 &
 ```
 
