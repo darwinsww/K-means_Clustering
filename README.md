@@ -89,13 +89,13 @@ weka.Run .FilteredClassifier -o -v -t ./data/assignment1/mnist/training.arff -T 
 
 ## Results
 Several experiments have been conducted to test the performance of the k-means image filter. In these experiments, I used 4 difierent classification problems (mnist, cifar-10, fashion-mnist, and svhn), with difierent parameter settings for each of them. The explanations of the parameters are as follows:
--D: image directory, which specifies the directory of the input images.
--S: seed of the random function, which specifies the positions of the patches and the coordinates of the initial centroids.
--Z: patch size, which specifies the width/height of a patch truncated from an image.(Normally, the patch would be square.)
--K: number of centroids/clusters.
--N: number of patches per image, which species how many patches would be truncated from an image.
--T: stride size, which specifies the size of the stride to use when creating features (both directions).
--P: pool size, which specifies the size of the pool to use when creating features (both directions).
+-D: image directory, which specifies the directory of the input images.  
+-S: seed of the random function, which specifies the positions of the patches and the coordinates of the initial centroids.  
+-Z: patch size, which specifies the width/height of a patch truncated from an image.(Normally, the patch would be square.)  
+-K: number of centroids/clusters.  
+-N: number of patches per image, which specifies how many patches would be truncated from an image.  
+-T: stride size, which specifies the size of the stride to use when creating features (both directions).  
+-P: pool size, which specifies the size of the pool to use when creating features (both directions).  
 
 For simplifying the experiments, the majority of the parameters above are fixed respectively in each classication problems. In the test of MNIST and FASHION-MNIST, which are with 28x28 pixel images, the settings of part parameters are: patch size = 8, stride = 4, pool size = 2; while in the test of CIFAR-10 and SVHN, which are with 32x32 pixel images, the corresponding settings are: patch size = 8, stride = 3, pool size = 3. Seed is set to 0 all the time.
 
