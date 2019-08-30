@@ -71,7 +71,12 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
     ```
 
 ## Experiments
-
+```
+java -Xmx12g -cp "lib-stable-3-8/*:/home/ws96/wekafiles/packages/netlibNativeLinux/lib/*:out/production/MLAssignment1/" \
+weka.Run .FilteredClassifier -o -v -t ./data/assignment1/mnist/training.arff -T ./data/assignment1/mnist/testing.arff \
+-F ".KMeansImageFilter -D ./data/assignment1/mnist/ -Z 8 -N 4 -K 128 -T 4 -P 2 -S 0" \
+-W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N4-r1.13 &
+```
 
 ## Results
 Several experiments have been conducted to test the performance of the k-means image filter. In these experiments, I used 4 difierent classification problems (mnist, cifar-10, fashion-mnist, and svhn), with difierent parameter settings for each of them. The explanations of the parameters are as follows:
@@ -99,7 +104,7 @@ For higher accuracy, I specified the error range of SSE < 0.01 in two iterations
 According to my experience, the iteration processes related to the same experiment are all the same if I used totally same parameters. In addition, the iteration times in the 4 problems each would generally increase with the growth of N, and decrease with the growth of K.
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Iteration_times_for_convergence.png)
 
-- [### Time taken to test model on testing data (Unit: second)]
+### Time taken to test model on testing data (Unit: second)
 The statistics may not be accurate since the computer is not exclusive when testing. However, it also could be regarded as an indicator of the efficiency of the algorithm. In each problem, the processing times with the same K are of the same order of magnitude. On the contrary, it would increase rapidly as the growth of K. This is because the bigger K is, the more features will be generated. Among all the situations, SVHN definitely took the longest time due to its larger size and higher complexity.
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Time_taken_to_test_model_on_testing_data.png)
 
