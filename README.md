@@ -183,10 +183,10 @@ The statistics may not be accurate since the computer is not exclusive when test
 
 ## Conclusions
 Images in the 4 problems have difierent characteristics. According to their overall accuracy, I ranked them as follows:
-- [MNIST]: black-and-white images with numeric patterns.
-- [FASHION-MNIST]: black-and-white images with difierent kinds of clothing.
-- [SVHN]: colourful images with numeric patterns.
-- [CIFAR-10]: colourful images with difierent types of objects.
+- MNIST: black-and-white images with numeric patterns.
+- FASHION-MNIST: black-and-white images with difierent kinds of clothing.
+- SVHN: colourful images with numeric patterns.
+- CIFAR-10: colourful images with difierent types of objects.
 
 To the same data scale, MNIST always has the highest accuracy, while CIFAR-10 has the lowest. FASHION-MNIST and SVHN, which the former
 is a little bit higher than the latter, are both in the middle.
