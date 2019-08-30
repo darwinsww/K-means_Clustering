@@ -1,7 +1,19 @@
 # Using K-means Clustering to Learn Representations for Image Classification
+The k-means clustering algorithm, fast and relatively simple to implement, is one of the oldest algorithms in machine learning. It is still surprisingly useful and widely used in practice. One particularly interesting application is its use for feature extraction from images. The extracted features enable transformation of images into a representation that is suitable for standard classification
+algorithms, yielding a fast and simple method for image classification.  
+
+The basic method for extracting features from images using k-means is simple: Split the training images into equal-size "patches", represent each patch as a vector of numbers (consisting, for example, of RBG values), and cluster the vectors using k-means. The nal cluster centres, which can be viewed as representatives of the collection of image patches, are the extracted features.  
+
+Once features (i.e., cluster centres) have been extracted, we can use each of them to process an image by using it in a filter that is run across the image: We calculate the cross-correlation between the feature and corresponding subregions of the image as we slide the filter across the image, and push the output of the cross-correlation operation, a single number for each subregion, through a nonlinear ("activation") function. The output of the filter - a "feature map" - will be a new "image" showing how well the feature aligns with each subregion of the input image. Note that there will be one feature map (corresponding to a "channel") for each cluster centre. The set of filters is called a "filter bank".  
+
+Each feature map can be represented as a high-dimensional vector, just like the data from a colour channel in the original input image, and we can concatenate the vectors for all feature maps to make a very high-dimensional vector that we can use as a training instance (also called "feature vector") for a standard classification algorithm. However, in practice, we need to reduce dimensionality to make this process workable. There are two mechanism for doing this: 1) When a filter is run across an image, we can specify a step size|
+also called "stride"|so that the size of the resulting feature map is reduced, and 2) after the feature maps have been created, we can reduce their size by splitting them into regions and pooling values from each region|for example, we can simply average all the numeric values in each region.  
+
+It turns out that applying this process to raw image data does not work that well. To make the process work better, the input values from each raw image are normalised and decorrelated using a process called "whitening". The paper (Coates & Ng, 2012) describes all this in detail. The pseudo code for the preprocessing steps and the clustering process are given on page 6 of this paper. Note that the paper applies a variant of k-means called "spherical" k-means, which ensures that the vectors representing each cluster centre all have length 1. Section 4 of the paper describes how to process images based on the output "dictionary" of k-means|each cluster centre is viewed as a code word in a dictionary.  
+
 
 ## References
-Coates, A. & Ng, A. Y. (2012). Learning feature representations with k-means. In Neural networks: Tricks of the trade (pp. 561{580). Springer.
+Coates, A. & Ng, A. Y. (2012). Learning feature representations with k-means. In Neural networks: Tricks of the trade (pp. 561-580). Springer.
 
 Frank, E., Hall, M. A. & Witten, I. H. (2016). The WEKA Workbench. On-line Appendix for "Data Mining: Practical Machine Learning Tools and Techniques", Morgan Kaufmann, Fourth Edition, 2016.
 
