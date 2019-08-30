@@ -9,6 +9,48 @@ line Appendix for "Data Mining: Practical Machine Learning Tools and
 Techniques", Morgan Kaufmann, Fourth Edition, 2016.
 
 
+@incollection{DBLP:series/lncs/CoatesN12,
+  author    = {Adam Coates and
+               Andrew Y. Ng},
+  title     = {Learning Feature Representations with K-Means},
+  booktitle = {Neural Networks: Tricks of the Trade - Second Edition},
+  pages     = {561--580},
+  year      = {2012},
+  crossref  = {DBLP:series/lncs/7700},
+  url       = {https://doi.org/10.1007/978-3-642-35289-8_30},
+  doi       = {10.1007/978-3-642-35289-8_30},
+  timestamp = {Tue, 16 May 2017 14:24:28 +0200},
+  biburl    = {https://dblp.org/rec/bib/series/lncs/CoatesN12},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@book{DBLP:series/lncs/7700,
+  editor    = {Gr{\'{e}}goire Montavon and
+               Genevieve B. Orr and
+               Klaus{-}Robert M{\"{u}}ller},
+  title     = {Neural Networks: Tricks of the Trade - Second Edition},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {7700},
+  publisher = {Springer},
+  year      = {2012},
+  url       = {https://doi.org/10.1007/978-3-642-35289-8},
+  doi       = {10.1007/978-3-642-35289-8},
+  isbn      = {978-3-642-35288-1},
+  timestamp = {Tue, 16 May 2017 14:24:27 +0200},
+  biburl    = {https://dblp.org/rec/bib/series/lncs/7700},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@book{weka_book,
+  author = {Ian H. Witten and Eibe Frank and Mark A. Hall},
+  title = {Data Mining: Practical Machine Learning Tools and Techniques},
+  publisher = {Morgan Kaufmann},
+  year = 2011,
+  address = {Burlington, MA},
+  edition = 3,
+  http = {http://www.cs.waikato.ac.nz/~ml/weka/book.html}
+}
+
+
 ## Training Data
 - [mnist](https://www.cs.waikato.ac.nz/ml/521/assignment1/mnist.tar.gz)
 - [svhn](https://www.cs.waikato.ac.nz/ml/521/assignment1/svhn.tar.gz )
