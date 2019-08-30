@@ -72,9 +72,9 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
     
 ## Compile & Package
 If you don't want to use IntelliJ, following method could be an alternative:
-- [Compile]:
+- [Compile]:  
 ```javac -classpath "/home/ws96/weka-3-9-2/weka.jar:/home/ws96/weka-3-9-2/mtj.jar" -d ./out/production/MLAssignment1 ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java```
-- [Package]:
+- [Package]:  
 ```jar -cvf KMeansImageFilter.jar ./out/production/MLAssignment1/weka/filters/unsupervised/attribute/*.class```
 
 
