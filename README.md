@@ -24,7 +24,7 @@ The task in this project is to implement the method from (Coates & Ng, 2012) as 
 
 
 ## System Environment
-- [OS] Ubuntu 18.04 on AWS EC2 
+- OS - Ubuntu 18.04 on AWS EC2 
 ```
 ubuntu@ip-172-31-8-70:~/ml/weka-3-8-2$ lsb_release -a
 No LSB modules are available.
@@ -37,7 +37,7 @@ ubuntu@ip-172-31-8-70:~/ml/weka-3-8-2$ uname -a
 Linux ip-172-31-8-70 4.15.0-1044-aws #46-Ubuntu SMP Thu Jul 4 13:38:28 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
-- [JAVA]
+- JAVA
 ```
 ubuntu@ip-172-31-8-70:~/ml/weka-3-8-2$ java -version
 java version "1.8.0_171"
@@ -51,7 +51,7 @@ Downlard ```"waka-x.x.x.zip"``` in the section ```"Other platforms (Linux, etc.)
 Unzip the zip file and you will find the necessary jar packages. Here used the ```"weka-3-8-2.zip"```.   
 
 - [netlibNativeLinux](http://weka.sourceforge.net/packageMetaData/netlibNativeLinux/index.html) Here used ```"netlibNativeLinux1.0.2"```    
-- [libxtst-dev] 
+- libxtst-dev 
 ```
 sudo apt-get install libxtst-dev
 ```
@@ -83,7 +83,7 @@ sudo apt-get install libxtst-dev
 18. Replace the blank ```"KMeansImageFilter.java"``` with the file in this repo
 19. Select ```"Edit Configurations"``` from the ```"Run"``` menu
 20. Add a new ```"Run/Degbu Configuration"``` according to the following screenshot  
-![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Snapshot_of_the_project_configuration_in_IntelliJ.png)   
+    ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Snapshot_of_the_project_configuration_in_IntelliJ.png)   
 21. Select ```"Run 'KMeansImageFilter'"``` from the ```"Run"``` menu
 22. Check that output is given in the terminal
 23. Finally, you will find two outputs in the out folder:  
@@ -94,7 +94,7 @@ sudo apt-get install libxtst-dev
     
 ## Compile & Package
 If you don't want to use IntelliJ, following method could be an alternative:
-- [Create Folders]: 
+- Create Folders: 
 ```
 mkdir -p ~/ml
 
@@ -110,13 +110,13 @@ mkdir -p ./src/weka/filters/unsupervised/attribute
 mkdir -p ./out/production/K-means_Clustering
 ```
 
-- [Copy Files]:   
+- Copy Files:   
 Copy ```"netlibNativeLinux1.0.2.zip"``` to the folder ```"~/ml/netlibNativeLinux1.0.2"```   
 Copy ```"weka-3-8-2.zip"``` to the folder ```"~/ml/weka-3-8-2"```   
 Copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/lib-stable-3-8-2"```      
 Copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```     
 
-- [Extraction]:
+- Extraction:
 ```
 cd ~/ml/weka-3-8-2
 unzip weka-3-8-2.zip
@@ -128,14 +128,14 @@ cd ~/ml/K-means_Clustering/data
 tar -zxvf mnist.tar.gz
 ```
 
-- [Compile]:  
+- Compile:  
 ```
 cd ~/ml/K-means_Clustering
 # Use absolute path in the classpath
 javac -classpath "/home/ubuntu/ml/lib-stable-3-8-2/*" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
 ```
 
-- [Package]:  
+- Package:  
 ```
 cd ~/ml/K-means_Clustering
 jar -cvf ./out/production/K-means_Clustering/KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class
