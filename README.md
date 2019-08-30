@@ -21,6 +21,8 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
     mtj.jar  
     arpack_combined_all.jar   
     core.jar  
+    Final project structure should be like this:  
+    ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Project_structure.png)  
 13. Add them all in the same way
 14. Select "OK"
 15. Right-click on "src" under "KMeansImageFilter" and select "New" -> "File"
