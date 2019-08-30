@@ -74,7 +74,7 @@ cd ml
 mkdir K-means_Clustering
 mkdir weka-3-8-2
 cd K-means_Clustering
-mkdir -p ./data/mnist
+mkdir -p ./data
 mkdir -p ./lib-stable-3-8
 mkdir -p ./src/weka/filters/unsupervised/attribute
 mkdir -p ./out/production/K-means_Clustering
@@ -82,7 +82,7 @@ mkdir -p ./out/production/K-means_Clustering
 
 Then,   
 copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```   
-copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data/mnist"```   
+copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```   
 
 - [Compile]:  
 ```
