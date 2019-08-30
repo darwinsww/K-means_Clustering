@@ -106,7 +106,8 @@ tar -zxvf mnist.tar.gz
 - [Compile]:  
 ```
 cd ~/ml/K-means_Clustering
-javac -classpath "~/ml/lib-stable-3-8-2/weka.jar:~/ml/lib-stable-3-8-2/mtj.jar:~/ml/lib-stable-3-8-2/arpack_combined_all.jar:~/ml/lib-stable-3-8-2/core.jar:~/ml/lib-stable-3-8-2/weka-src.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
+# Use absolute path in the classpath
+javac -classpath "/home/ubuntu/ml/lib-stable-3-8-2/*" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
 ```
 
 - [Package]:  
@@ -120,7 +121,8 @@ jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/
 A lot of experiments had been done, following is an example command runs the test:
 ```
 cd ~/ml/weka-3-8-2
-java -Xmx12g -cp "~/ml/lib-stable-3-8-2/*:~/ml/netlibNativeLinux1.0.2/lib/*:~/ml/K-means_Clustering/out/production/K-means_Clustering/weka/filters/unsupervised/attribute/" \
+# Use absolute path in the classpath
+java -Xmx12g -cp "/home/ubuntu/ml/lib-stable-3-8-2/*:/home/ubuntu/ml/netlibNativeLinux1.0.2/lib/*:/home/ubuntu/ml/K-means_Clustering/out/production/K-means_Clustering/weka/filters/unsupervised/attribute/" \
 weka.Run .FilteredClassifier -o -v -t ~/ml/K-means_Clustering/data/mnist/training.arff -T ~/ml/K-means_Clustering/data/mnist/testing.arff \
 -F ".KMeansImageFilter -D ~/ml/K-means_Clustering/data/mnist/ -Z 8 -N 1 -K 128 -T 4 -P 2 -S 0" \
 -W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N1-r1.20 &
