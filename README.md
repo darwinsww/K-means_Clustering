@@ -146,9 +146,9 @@ jar -cvf ./out/production/K-means_Clustering/KMeansImageFilter.jar ./out/product
 ## Experiments
 A lot of experiments had been done, following is an example command runs the test:
 ```
-cd ~/ml/weka-3-8-2
+cd ~/ml/K-means_Clustering
 # Use absolute path both in the classpath and the data file path
-java -Xmx12g -cp "/home/ubuntu/ml/lib-stable-3-8-2/*:/home/ubuntu/ml/netlibNativeLinux1.0.2/lib/*:/home/ubuntu/ml/K-means_Clustering/out/production/K-means_Clustering" weka.Run .FilteredClassifier -o -v -t /home/ubuntu/ml/K-means_Clustering/data/mnist/training.arff -T /home/ubuntu/ml/K-means_Clustering/data/mnist/testing.arff -F ".KMeansImageFilter -D /home/ubuntu/ml/K-means_Clustering/data/mnist -Z 8 -N 1 -K 128 -T 4 -P 2 -S 0" -W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N1-r1.20 &
+java -Xmx12g -cp "/home/ubuntu/ml/lib-stable-3-8-2/*:/home/ubuntu/ml/netlibNativeLinux1.0.2/lib/*:/home/ubuntu/ml/K-means_Clustering/out/production/K-means_Clustering" weka.Run .FilteredClassifier -o -v -t ./data/mnist/training.arff -T ./data/mnist/testing.arff -F ".KMeansImageFilter -D ./data/mnist -Z 8 -N 1 -K 128 -T 4 -P 2 -S 0" -W .MultiClassClassifier -- -M 3 -W .SGD -- -N -M -F 0 -L 0.0001 -E 100 >> mnist-K128N1-r1.20 &
 ```
 
 ## Results
