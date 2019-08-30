@@ -74,4 +74,42 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
 
 
 ## Results
+Several experiments have been conducted to test the performance of the k-means image filter. In these experiments, I used 4 difierent classification problems (mnist, cifar-10, fashion-mnist, and svhn), with difierent parameter settings for each of them. The explanations of the parameters are as follows:
+-D: image directory, which specifies the directory of the input images.
+-S: seed of the random function, which specifies the positions of the patches and the coordinates of the initial centroids.
+-Z: patch size, which specifies the width/height of a patch truncated from an image.(Normally, the patch would be square.)
+-K: number of centroids/clusters.
+-N: number of patches per image, which species how many patches would be truncated from an image.
+-T: stride size, which specifies the size of the stride to use when creating features (both directions).
+-P: pool size, which specifies the size of the pool to use when creating features (both directions).
+
+For simplifying the experiments, the majority of the parameters above are fixed respectively in each classication problems. In the test of MNIST and FASHION-MNIST, which are with 28x28 pixel images, the settings of part parameters are: patch size = 8, stride = 4, pool size = 2; while in the test of CIFAR-10 and SVHN, which are with 32x32 pixel images, the corresponding settings are: patch size = 8, stride = 3, pool size = 3. Seed is set to 0 all the time.
+
+So, the main parameters to vary are the number of clusters (-K) and the number of patches per image (-N). For comparison, I implemented 9 experiments with difierent combinations of K = 128, 500, 1000 and N = 1, 4, 8 for the 4 problems each.
+
+By the experiments, the results are demonstrated in the following tables, which were generated using WEKA [2]. Unfortunately, I just could get the iteration times for convergence of SVHN when K = 1000 and N = 8. I failed to get its accuracy because the execution would spend such a long time, during which I encountered several times of connection lost.
+
+### Accuracy
+Regarding MNIST, FASHION-MNIST, and SVHN, the accuracies are nearly the same within their 9 experiments each. More precisely, yet, the accuracies gradually increase with the growth of K.   
+As for CIFAR-10, the accuracy reached the bottom with the minimum of K. It reached the highest point when K = 500. It went a little bit down when K increased to 1000, however.
+![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Accuracy.png)
+
+### Iteration times for convergence
+For higher accuracy, I specified the error range of SSE < 0.01 in two iterations as the terminal condition of iteration.   
+According to my experience, the iteration processes related to the same experiment are all the same if I used totally same parameters. In addition, the iteration times in the 4 problems each would generally increase with the growth of N, and decrease with the growth of K.
+![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Iteration_times_for_convergence.png)
+
+### Time taken to test model on testing data (Unit: second)
+The statistics may not be accurate since the computer is not exclusive when testing. However, it also could be regarded as an indicator of the efficiency of the algorithm. In each problem, the processing times with the same K are of the same order of magnitude. On the contrary, it would increase rapidly as the growth of K. This is because the bigger K is, the more features will be generated. Among all the situations, SVHN definitely took the longest time due to its larger size and higher complexity.
+![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Time_taken_to_test_model_on_testing_data.png)
+
+
+
+
+
+
+
+
+
+
 
