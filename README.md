@@ -86,10 +86,10 @@ mkdir -p ./out/production/K-means_Clustering
 ```
 
 - [Copy Files]:   
-Copy ```"netlibNativeLinux1.0.2.zip"``` to the folder ```"~/ml/netlibNativeLinux1.0.2"```
-Copy ```"weka-3-8-2.zip"``` to the folder ```"~/ml/weka-3-8-2"```
-Copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/lib-stable-3-8-2"```   
-Copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```  
+Copy ```"netlibNativeLinux1.0.2.zip"``` to the folder ```"~/ml/netlibNativeLinux1.0.2"```   
+Copy ```"weka-3-8-2.zip"``` to the folder ```"~/ml/weka-3-8-2"```   
+Copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/lib-stable-3-8-2"```      
+Copy ```"mnist.tar.gz"``` to the folder ```"~/ml/K-means_Clustering/data"```     
 
 - [Extraction]:
 ```
