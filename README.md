@@ -1,4 +1,12 @@
-# K-means_Clustering
+# Using K-means Clustering to Learn Representations for Image Classification
+
+## References
+Coates, A. & Ng, A. Y. (2012). Learning feature representations with k-means.
+In Neural networks: Tricks of the trade (pp. 561{580). Springer.
+
+Frank, E., Hall, M. A. & Witten, I. H. (2016). The WEKA Workbench. On-
+line Appendix for "Data Mining: Practical Machine Learning Tools and
+Techniques", Morgan Kaufmann, Fourth Edition, 2016.
 
 
 ## Training Data
