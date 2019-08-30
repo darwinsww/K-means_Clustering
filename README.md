@@ -67,16 +67,20 @@ Unzip the zip file and you will find the necessary jar packages. I used the ```"
     
 ## Compile & Package
 If you don't want to use IntelliJ, following method could be an alternative:
-
+- [Create Folders]: 
 ```
+mkdir -p ~/ml/weka-3-8-2
+cd ml
 mkdir K-means_Clustering
 cd K-means_Clustering
 mkdir -p ./src/weka/filters/unsupervised/attribute
 mkdir -p ./out/production/K-means_Clustering
 ```
 
+Then, copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-2"```
+
 - [Compile]:  
-```javac -classpath "/home/ws96/weka-3-9-2/weka.jar:/home/ws96/weka-3-9-2/mtj.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java```
+```javac -classpath "~/ml/weka-3-8-2/weka.jar:~/ml/weka-3-8-2/mtj.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java```
 
 - [Package]:  
 ```jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class```
