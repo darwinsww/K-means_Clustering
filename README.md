@@ -1,5 +1,13 @@
 # K-means_Clustering
 
+
+## Training Data
+- [mnist](https://www.cs.waikato.ac.nz/ml/521/assignment1/mnist.tar.gz)
+- [svhn](https://www.cs.waikato.ac.nz/ml/521/assignment1/svhn.tar.gz )
+- [cifar-10](https://www.cs.waikato.ac.nz/ml/521/assignment1/cifar-10.tar.gz)
+- [fashion-mnist](https://www.cs.waikato.ac.nz/ml/521/assignment1/fashion-mnist.tar.gz)
+
+
 ## Dependency
 - [Weka](https://www.cs.waikato.ac.nz/ml/weka/downloading.html)  
 Downlard ```"waka-x.x.x.zip"``` in the section ```"Other platforms (Linux, etc.)"```.   
