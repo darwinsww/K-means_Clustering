@@ -18,9 +18,11 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 10. Navigate to the weka.jar file from the WEKA distribution you have downloaded and select it  
 11. Use the same way to add the weka-src.jar, but untick "src/test/java"
 12. Expand the weka.jar file, then you will find the following three jar files in the "weka-src/lib":  
+    ```
     mtj.jar  
     arpack_combined_all.jar   
     core.jar  
+    ```
 13. Add them all in the same way
 14. Final project structure should be like this:  
     ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Project_structure.png)  
@@ -34,8 +36,9 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 21. Select "Run 'KMeansImageFilter'" from the "Run" menu
 22. Check that output is given in the terminal
 23. Finally, you will find two outputs in the out folder:  
+    ```
     KMeansImageFilter.class  
     KMeansImageFilter$1MyPanel.class  
-   
+    ```
 
     
