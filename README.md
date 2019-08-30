@@ -99,7 +99,7 @@ For higher accuracy, I specified the error range of SSE < 0.01 in two iterations
 According to my experience, the iteration processes related to the same experiment are all the same if I used totally same parameters. In addition, the iteration times in the 4 problems each would generally increase with the growth of N, and decrease with the growth of K.
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Iteration_times_for_convergence.png)
 
-### Time taken to test model on testing data (Unit: second)
+### - [Time taken to test model on testing data (Unit: second)]
 The statistics may not be accurate since the computer is not exclusive when testing. However, it also could be regarded as an indicator of the efficiency of the algorithm. In each problem, the processing times with the same K are of the same order of magnitude. On the contrary, it would increase rapidly as the growth of K. This is because the bigger K is, the more features will be generated. Among all the situations, SVHN definitely took the longest time due to its larger size and higher complexity.
 ![image](https://github.com/darwinsww/K-means_Clustering/blob/master/img/Time_taken_to_test_model_on_testing_data.png)
 
@@ -107,9 +107,9 @@ The statistics may not be accurate since the computer is not exclusive when test
 ## Conclusions
 Images in the 4 problems have dierent characteristics. According to their overall accuracy, I ranked them as follows:
 - [MNIST]: black-and-white images with numeric patterns.
-- [FASHION-MNIST]: black-and-white images with dierent kinds of clothing.
+- [FASHION-MNIST]: black-and-white images with difierent kinds of clothing.
 - [SVHN]: colourful images with numeric patterns.
-- [CIFAR-10]: colourful images with dierent types of objects.
+- [CIFAR-10]: colourful images with difierent types of objects.
 
 To the same data scale, MNIST always has the highest accuracy, while CIFAR-10 has the lowest. FASHION-MNIST and SVHN, which the former
 is a little bit higher than the latter, are both in the middle.
