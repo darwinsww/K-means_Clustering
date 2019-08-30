@@ -10,7 +10,7 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 2. Select "Create New Project"  
 3. Select "Next"  
 4. Select "Next"  
-5. Enter "KMeansImageFilter" as the project name
+5. Enter "K-means_Clustering" as the project name
 6. Select "Finish"
 7. Select "Project Structure" from the "File" menu
 8. Select "Libraries"
@@ -23,7 +23,13 @@ Downlard waka-x.x.x.zip in "Other platforms (Linux, etc.)". Unzip the zip file a
 15. Select "OK"
 16. Right-click on "src" under "KMeansImageFilter" and select "New" -> "File"
 17. Enter "weka/filters/unsupervised/attribute/KMeansImageFilter.java" and choose "OK"
-18. Copy and paste the starter code given below
+18. Replace the blank KMeansImageFilter.java with the file in this repo
 19. Select "Edit Configurations..." from the "Run" menu
-20. Add a new configuration for "KMeansImageFilter" and give "-h" as the "Program Arguments" 
+20. Add a new configuration according to the following screenshot
+
+
+
 21. Select "Run 'KMeansImageFilter'" from the "Run" menu
+22. Check that output is given in the terminal
+
+
