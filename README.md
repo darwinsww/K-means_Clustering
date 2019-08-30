@@ -81,11 +81,13 @@ Then, copy ```"mtj.jar"``` and ```"weka.jar"``` to the folder ```"~/ml/weka-3-8-
 
 - [Compile]:  
 ```
+cd ~/ml/K-means_Clustering
 javac -classpath "~/ml/weka-3-8-2/weka.jar:~/ml/weka-3-8-2/mtj.jar" -d ./out/production/K-means_Clustering ./src/weka/filters/unsupervised/attribute/KMeansImageFilter.java
 ```
 
 - [Package]:  
 ```
+cd ~/ml/K-means_Clustering
 jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class
 ```
 
