@@ -170,7 +170,7 @@ In conclusion, the k-means image filter algorithm I implemented is more suitable
 
 
 ## References
-- [1] Adam Coates and Andrew Y. Ng. Learning feature representations with kmeans. In Gregoire Montavon, Genevieve B. Orr, and Klaus-Robert Muller, editors, Neural Networks: Tricks of the Trade - Second Edition, volume 7700 of Lecture Notes in Computer Science, pages 561-580. Springer, 2012. 
+- [1] Adam Coates and Andrew Y. Ng. Learning feature representations with kmeans. In Gregoire Montavon, Genevieve B. Orr, and Klaus-Robert Muller, editors, Neural Networks: Tricks of the Trade - Second Edition, volume 7700 of Lecture Notes in Computer Science, pages 561-580. Springer, 2012.   
 [Download Here](https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf)
 
 - [2] Ian H. Witten, Eibe Frank, and Mark A. Hall. Data Mining: Practical Machine Learning Tools and Techniques. Morgan Kaufmann, Burlington, MA, 3 edition, 2011.
