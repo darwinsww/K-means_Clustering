@@ -113,7 +113,7 @@ javac -classpath "/home/ubuntu/ml/lib-stable-3-8-2/*" -d ./out/production/K-mean
 - [Package]:  
 ```
 cd ~/ml/K-means_Clustering
-jar -cvf KMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class
+jar -cvf ./out/production/K-means_ClusteringKMeansImageFilter.jar ./out/production/K-means_Clustering/weka/filters/unsupervised/attribute/*.class
 ```
 
 
