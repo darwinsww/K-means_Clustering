@@ -24,7 +24,7 @@ The task in this project is to implement the method from (Coates & Ng, 2012) as 
 
 
 ## System Environment
-- [OS]
+- [OS] Ubuntu 18.04 on AWS EC2 
 ```
 ubuntu@ip-172-31-8-70:~/ml/weka-3-8-2$ lsb_release -a
 No LSB modules are available.
@@ -51,7 +51,10 @@ Downlard ```"waka-x.x.x.zip"``` in the section ```"Other platforms (Linux, etc.)
 Unzip the zip file and you will find the necessary jar packages. Here used the ```"weka-3-8-2.zip"```.   
 
 - [netlibNativeLinux](http://weka.sourceforge.net/packageMetaData/netlibNativeLinux/index.html) Here used ```"netlibNativeLinux1.0.2"```    
-- [libxtst-dev] sudo apt-get install libxtst-dev
+- [libxtst-dev] 
+```
+sudo apt-get install libxtst-dev
+```
 
 ## Step-by-step instructions for setting up an IntelliJ project
 1. Start ```"IntelliJ"```
