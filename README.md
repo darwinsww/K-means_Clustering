@@ -4,7 +4,7 @@
 The k-means clustering algorithm, fast and relatively simple to implement, is one of the oldest algorithms in machine learning. It is still surprisingly useful and widely used in practice. One particularly interesting application is its use for feature extraction from images. The extracted features enable transformation of images into a representation that is suitable for standard classification
 algorithms, yielding a fast and simple method for image classification.  
 
-The basic method for extracting features from images using k-means is simple: Split the training images into equal-size "patches", represent each patch as a vector of numbers (consisting, for example, of RBG values), and cluster the vectors using k-means. The nal cluster centres, which can be viewed as representatives of the collection of image patches, are the extracted features.  
+The basic method for extracting features from images using k-means is simple: Split the training images into equal-size "patches", represent each patch as a vector of numbers (consisting, for example, of RBG values), and cluster the vectors using k-means. The final cluster centres, which can be viewed as representatives of the collection of image patches, are the extracted features.  
 
 Once features (i.e., cluster centres) have been extracted, we can use each of them to process an image by using it in a filter that is run across the image: We calculate the cross-correlation between the feature and corresponding subregions of the image as we slide the filter across the image, and push the output of the cross-correlation operation, a single number for each subregion, through a nonlinear ("activation") function. The output of the filter - a "feature map" - will be a new "image" showing how well the feature aligns with each subregion of the input image. Note that there will be one feature map (corresponding to a "channel") for each cluster centre. The set of filters is called a "filter bank".  
 
@@ -161,7 +161,7 @@ Several experiments have been conducted to test the performance of the k-means i
 -T: stride size, which specifies the size of the stride to use when creating features (both directions).  
 -P: pool size, which specifies the size of the pool to use when creating features (both directions).  
 
-For simplifying the experiments, the majority of the parameters above are fixed respectively in each classication problems. In the test of MNIST and FASHION-MNIST, which are with 28x28 pixel images, the settings of part parameters are: patch size = 8, stride = 4, pool size = 2; while in the test of CIFAR-10 and SVHN, which are with 32x32 pixel images, the corresponding settings are: patch size = 8, stride = 3, pool size = 3. Seed is set to 0 all the time.
+For simplifying the experiments, the majority of the parameters above are fixed respectively in each classification problems. In the test of MNIST and FASHION-MNIST, which are with 28x28 pixel images, the settings of part parameters are: patch size = 8, stride = 4, pool size = 2; while in the test of CIFAR-10 and SVHN, which are with 32x32 pixel images, the corresponding settings are: patch size = 8, stride = 3, pool size = 3. Seed is set to 0 all the time.
 
 So, the main parameters to vary are the number of clusters (-K) and the number of patches per image (-N). For comparison, I implemented 9 experiments with difierent combinations of K = 128, 500, 1000 and N = 1, 4, 8 for the 4 problems each.
 
